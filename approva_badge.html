@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/bootstrap-lombardia.min.css">
+    <link rel="stylesheet" href="./custom-app.css">
+  </head>
+
+<body>
+<header class="it25-none">
+<div w3-include-html="topbar.html"></div> 
+<div w3-include-html="barra_istituzionale.html"></div>
+<div w3-include-html="barra_utente_fnru.html"></div>
+</header>
+
+<main>
+  <div class="container-fluid">
+    <div class="my-3 px-lg-5 neutral-2-color-b5 "><h3>Badge</h3></div>
+    <form class="my-5 px-lg-5">
+      <div w3-include-html="form_badge.html"></div>
+
+      <div class="row my-md-3">
+        <div class="col-md-4 my-3 my-md-0">
+          <label class="output">Azienda</label>
+          <div class="decodifica">Capgemini Italia Spa</div>
+        </div>         
+        <div class="col-md-2 my-3 my-md-0">
+          <label class="output">Data di nascita</label>
+          <div class="decodifica">20/01/1989</div>
+        </div>
+        <div class="col-md-3 my-3 my-md-0">
+          <label class="output">Comune di nascita</label>
+          <div class="decodifica">Milano</div>
+        </div>
+        <div class="col-md-2 my-3 my-md-0">
+          <label class="output">Stato</label>
+          <div class="decodifica">Italia</div>
+        </div>
+        <div class="col-md-1 my-3 my-md-0">
+          <label class="output">Sesso</label>
+          <div class="decodifica">M</div>
+        </div>
+      </div>
+
+      <div class="row my-md-3">
+        <div class="col-md-4 my-3 my-md-0">
+          <label class="output">Indirizzo residenza</label>
+          <div class="decodifica">Via Monti e Tognetti 21</div>
+        </div>         
+        <div class="col-md-2 my-3 my-md-0">
+          <label class="output">Frazione</label>
+          <div class="decodifica"></div>
+        </div>
+        <div class="col-md-3 my-3 my-md-0">
+          <label class="output">Comune di residenza</label>
+          <div class="decodifica">Milano</div>
+        </div>
+        <div class="col-md-2 my-3 my-md-0">
+          <label class="output">Prov.</label>
+          <div class="decodifica">MI  </div>
+        </div>
+        <div class="col-md-1 my-3 my-md-0">
+          <label class="output">CAP</label>
+          <div class="decodifica">20100</div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="col-12">
+          <div class="form-group">
+            <input type="text" class="form-control" id="note">
+            <label for="note">Note</label>
+          </div>  
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-12">
+          <div class="float-right">
+            <a href="elenco_badge.html"><button type="button" class="btn btn-outline-primary">Indietro</button></a>
+            <button type="button" class="btn btn-primary">Salva</button>
+            <a href="elenco_badge.html"><button type="button" class="btn btn-outline-danger">Approva</button></a>
+          </div>
+        </div>
+      </div>
+      
+    </form>
+  </div> 
+</main>
+
+<div w3-include-html="footer_minimo.html"></div> 
+
+
+<script src="includer.js"></script>
+<script>
+includeHTML();
+setTimeout(function() { loadScript("./js/bootstrap-lombardia.bundle.min.js"); }, 500);
+setTimeout(function() { 
+  $('#data_da').datepicker({
+    inputFormat: ["dd/MM/yyyy"],
+    outputFormat: 'dd/MM/yyyy',
+    next: '#data_a'
+  });
+  $('#data_a').datepicker({
+    inputFormat: ["dd/MM/yyyy"],
+    outputFormat: 'dd/MM/yyyy',
+    previous: '#data_da'
+  });
+}, 1000);
+</script>
+</body>
+</html>
