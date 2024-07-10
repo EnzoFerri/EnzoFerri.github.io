@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/bootstrap-lombardia.min.css">
+    <link rel="stylesheet" href="./custom-app.css">
+  </head>
+
+<body>
+<header class="it25-none">
+<div w3-include-html="topbar.html"></div> 
+<div w3-include-html="barra_istituzionale.html"></div>
+<div w3-include-html="barra_utente_scm.html"></div>
+</header>
+
+<main>
+  <div class="container-fluid">
+    <div class="my-3 px-lg-5 neutral-2-color-b5 h5">Riferimento Contrattuale per:</div>
+
+    <form class="my-5 px-lg-5">
+      <div w3-include-html="form_rif_contr.html"></div>
+      
+      <div class="row">
+        <div class="col-12">
+          <div class="float-right">
+            <a href="elenco_rif_contr.html"><button type="button" class="btn btn-outline-primary">Indietro</button></a>
+            <button type="button" class="btn btn-primary">Salva</button>
+            <a href="elenco_rif_contr.html"><button type="button" class="btn btn-outline-danger">Approva</button></a>
+          </div>
+        </div>
+      </div>
+
+    </form>
+  </div> 
+</main>
+
+      
+<div w3-include-html="footer_minimo.html"></div> 
+
+<script src="includer.js"></script>
+<script>
+includeHTML();
+setTimeout(function() { loadScript("./js/bootstrap-lombardia.bundle.min.js"); }, 500);
+setTimeout(function() { 
+  $('#data_da').datepicker({
+    inputFormat: ["dd/MM/yyyy"],
+    outputFormat: 'dd/MM/yyyy',
+    next: '#data_a'
+  });
+  $('#data_a').datepicker({
+    inputFormat: ["dd/MM/yyyy"],
+    outputFormat: 'dd/MM/yyyy',
+    previous: '#data_da'
+  });
+  $('#data_rrsdi').datepicker({
+    inputFormat: ["dd/MM/yyyy"],
+    outputFormat: 'dd/MM/yyyy'
+  });
+  $('#data_codice_etico').datepicker({
+    inputFormat: ["dd/MM/yyyy"],
+    outputFormat: 'dd/MM/yyyy'
+  });
+}, 1000);
+</script>
+</body>
+</html>

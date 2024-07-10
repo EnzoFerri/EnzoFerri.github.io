@@ -1,0 +1,100 @@
+/* # INCLUSO NELLO STD
+ * custom-lombardia/_it25-header.scss
+ */
+.it-header-slim-wrapper .it-header-slim-wrapper-content .header-slim-right-zone .btn-full {
+  padding: 17px;
+}
+
+
+/* # INCLUSO NELLO STD
+ * custom-lombardia/_forms.scss
+ * Per campi di decodifica e relativa label nei form
+ * Servono a tenerli allineati con i campi di input
+ */
+label.output {
+  position: absolute;
+  transform: translateY(-75%);
+  font-size: .777rem;
+  font-weight: 600;
+}
+div.decodifica {
+  padding: 8px;
+  font-weight: 700;
+}
+
+
+/* # - NON - INCLUSO NELLO STD
+ * Non servono, si ottiene lo stesso effetto in altro modo.
+ * (vedi Richesta badge si/no in form inserisci_badge)
+ */
+.form-check [type=checkbox]:checked+label.down::before {
+  top: 2%;
+}
+.form-check [type=checkbox]+label.down::after {
+  top: -16%; 
+}
+label.up-check {
+  position: absolute;
+  transform: translate(-6%, -96%);
+  font-size: .777rem;
+  font-weight: 600;
+}
+
+
+/* # INCLUSO NELLO STD
+ * Grigio più scuro x toggle e checkbox disabled.
+ * Implementato diversamente in:
+ * custom-lombardia/_forms.scss
+ * custom-lombardia/_form-toggles.scss
+ */
+.form-check [type=checkbox]:disabled:checked+label::after {
+    background-color: #b1b1b3;
+}
+
+
+/* # INCLUSO NELLO STD
+ * custom-lombardia/_steppers.scss
+ * Riduzione spazio occuoato dagli steppers
+ */
+@media (min-width: 992px) {
+  .steppers .steppers-header li {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+ul.steppers-header {
+  margin-bottom: 0;
+}
+
+
+/* # - NON - INCLUSO NELLO STD
+ * Sticking della testata tabella durante scroll delle righe
+ * Andrebbe in un custom_lombardia/_table.css
+ * ma il problema è il calcolo del valore di pixel da dare al 'top:'
+ */
+.it25-thead-stick th {
+  position: sticky;
+  top: 98px;
+  z-index: 2;
+}
+@media (min-width: 992px) {
+  .it25-thead-stick th {
+    top: 147px;
+  }
+  .it25-thead-stick.no-menu th {
+    top: 98px;
+  }
+  
+}
+
+
+/* # INCLUSO NELLO STD
+ * custom-lombardia/_buttons.scss
+ */
+.btn-outline-danger.disabled {
+  box-shadow: inset 0 0 0 2px #e6e6e6;  
+}
+.btn-primary.disabled, .btn-primary:disabled {
+    color: #2a7a38;
+}
+

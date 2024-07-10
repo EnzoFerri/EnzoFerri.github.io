@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/bootstrap-lombardia.min.css">
+    <link rel="stylesheet" href="./custom-app.css">
+  </head>
+
+<body>
+<header class="it25-none">
+<div w3-include-html="topbar.html"></div> 
+<div w3-include-html="barra_istituzionale.html"></div>
+<div w3-include-html="barra_utente_rich.html"></div>
+</header>
+
+<main>
+  <div class="container-fluid">
+    
+    <div w3-include-html="wizard_0.html"></div>
+
+    <form class="my-5 px-lg-5">
+       <div w3-include-html="form_anagrafica.html"></div>
+       
+      <div class="row">
+        <div class="col-12">
+          <div class="float-right">
+            <a href="elenco_risorse.html"><button type="button" class="btn btn-outline-primary">Indietro</button></a>
+            <a href="inserisci_rif_contr.html"><button type="button" class="btn btn-outline-primary">Avanti</button></a>
+          </div>
+        </div>
+      </div>
+      
+    </form>
+  </div> 
+</main>
+
+      
+<div w3-include-html="footer_minimo.html"></div> 
+
+
+<script src="includer.js"></script>
+<script>
+includeHTML();
+setTimeout(function() { loadScript("./js/bootstrap-lombardia.bundle.min.js"); }, 500);
+</script>
+</body>
+</html>
