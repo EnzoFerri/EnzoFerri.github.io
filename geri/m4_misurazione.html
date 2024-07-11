@@ -117,10 +117,133 @@
 
 <div class="container"> 
 	<form class="my-5">
-	
-	
-		
-		
+		<div class="row">
+			<div class="form-group col-md-3">
+				<label class="active" for="codiceDosimetro">Codice registrazione dosimetro</label>
+				<input type="text" class="form-control" id="codiceDosimetro">
+			</div>
+			<div class="form-group col-md-4">
+				<div class="select-wrapper">
+					<label for="tipoLocale active">Tipo locale posizionamento dosimetro</label>
+					<select id="tipoLocale">
+						<option selected="" value="">Scegli un'opzione</option>
+						<option value="1">Stanza letto</option>
+						<option value="2">Soggiorno/salone/tinello/studio</option>
+						<option value="3">Cucina abitabile</option>
+						<option value="4">Monolocale</option>
+						<option value="3">Altro</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group col-md-5">
+				<label for="noteLocalePosizion" class="active">Note</label>
+				<textarea class="form-control" id="noteLocalePosizion" rows="1"></textarea>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group col-md-5">
+				<label class="active" for="luogoDosimetro">
+					<span data-bs-toggle="tooltip" data-bs-placement="top"
+					title="Descrizione del luogo esatto di posizionamento del dosimetro (es. Scaffale, sopra l'armadio, etc.)" id="infoLuogoDosimetro">
+						Luogo posizionamento dosimetro
+						<sup>
+							<svg class="icon icon-xs icon-info">
+								<use href="./bootstrap-lombardia/dist/svg/sprites.svg#it-info-circle"></use>
+							</svg>
+						</sup>
+					</span>
+				</label>
+				<input type="text" class="form-control" id="luogoDosimetro">
+			</div>
+			<div class="form-group col-md-3">
+				<label for="inputNProgressivo" class="input-number-label active">
+					<span data-bs-toggle="tooltip" data-bs-placement="top"
+					title="Utilizzato per differenziare le misurazioni effettuate nello stesso locale, viene assegnato un progressivo per ogni punto identificato." id="infoNProgressivo">
+						Numero progressivo
+						<sup>
+							<svg class="icon icon-xs icon-info">
+								<use href="./bootstrap-lombardia/dist/svg/sprites.svg#it-info-circle"></use>
+							</svg>
+						</sup>
+					</span>
+				</label>
+				<div class="input-group input-number">
+					<input type="number" value="1" class="form-control" data-bs-input min="1" max="10" step="1" id="inputNTotPiani" name="inputNTotPiani"/>
+					<span class="input-group-text align-buttons flex-column">
+						<button class="input-number-add">
+							<span class="visually-hidden">Aumenta valore</span>
+						</button>
+						<button class="input-number-sub">
+							<span class="visually-hidden">Diminuisci valore</span>
+						</button>
+					</span>
+				</div>
+			</div>
+			<div class="form-group col-md-4">
+				<div class="select-wrapper">
+					<label for="tipoLocale active">Piano locale</label>
+					<select id="tipoLocale">
+						<option selected="" value="">Scegli un'opzione</option>
+						<option value="ST">Sotterraneo</option>
+						<option value="S">Seminterrato</option>
+						<option value="T">Piano Terra</option>
+						<option value="R">Rialzato</option>
+						<option value="1">1° Piano</option>
+						<option value="2">2° Piano</option>
+						<option value="3">3° Piano</option>
+						<option value="4">4° Piano</option>
+						<option value="5">5° Piano</option>
+						<option value="6">6° Piano</option>
+						<option value="7">7° Piano</option>
+						<option value="8">8° Piano</option>
+						<option value="9">9° Piano</option>
+						<option value="10">&gt;9° Piano</option>
+					</select>
+				</div>
+			</div>			
+		</div>
+		<h6 class="mb-4">Periodo 1</h6>
+		<div class="row">
+      <div class="form-group col-md-3">
+        <div class="input-group">
+          <label class="active" for="inizioP1">Inizio posizionamento</label>
+          <input type="text" class="form-control" id="inizioP1" name="inizioP1"
+                 aria-label="scrivere data." placeholder="gg/mm/aaaa" />
+        </div>
+      </div>
+      <div class="form-group col-md-3">
+        <div class="input-group">
+          <label class="active" for="fineP1">Fine posizionamento</label>
+          <input type="text" class="form-control" id="fineP1" name="fineP1"
+                 aria-label="scrivere data." placeholder="gg/mm/aaaa" />
+        </div>
+      </div>
+			<div class="form-group col-md-3">
+				<label class="active" for="codiceDosimetroP1">Codice dosimetro</label>
+				<input type="text" class="form-control" id="codiceDosimetroP1">
+			</div>
+		</div>
+		<h6 class="mb-4">Periodo 2</h6>
+		<div class="row">
+      <div class="form-group col-md-3">
+        <div class="input-group">
+          <label class="active" for="inizioP2">Inizio posizionamento</label>
+          <input type="text" class="form-control" id="inizioP2" name="inizioP2"
+                 aria-label="scrivere data." placeholder="gg/mm/aaaa" />
+        </div>
+      </div>
+      <div class="form-group col-md-3">
+        <div class="input-group">
+          <label class="active" for="fineP2">Fine posizionamento</label>
+          <input type="text" class="form-control" id="fineP2" name="fineP2"
+                 aria-label="scrivere data." placeholder="gg/mm/aaaa" />
+        </div>
+      </div>
+			<div class="form-group col-md-3">
+				<label class="active" for="codiceDosimetroP2">Codice dosimetro</label>
+				<input type="text" class="form-control" id="codiceDosimetroP2">
+			</div>
+		</div>
 		<div class="row">
 			<div class="col">
 				<div class="d-flex justify-content-between mb-3">
@@ -165,18 +288,35 @@
 		<script src="./bootstrap-lombardia/dist/js/bootstrap-lombardia.bundle.min.js"></script>
 		<script>bootstrap.loadFonts('./bootstrap-lombardia/dist/fonts');</script>
 <script>
-const infoNInterni = document.getElementById('infoNInterni')
-const tooltipNInterni = new bootstrap.Tooltip(infoNInterni, {
+const infoLuogoDosimetro = document.getElementById('infoLuogoDosimetro')
+const tooltipLuogoDosimetro = new bootstrap.Tooltip(infoLuogoDosimetro, {
   boundary: document.body // or document.querySelector('#boundary')
 })
-const infoNPianiEdificio = document.getElementById('infoNPianiEdificio')
-const tooltipNPianiEdificio = new bootstrap.Tooltip(infoNPianiEdificio, {
+const infoNProgressivo = document.getElementById('infoNProgressivo')
+const tooltipNProgressivo = new bootstrap.Tooltip(infoNProgressivo, {
   boundary: document.body // or document.querySelector('#boundary')
 })
-const infoInterventi = document.getElementById('infoInterventi')
-const tooltipInterventi = new bootstrap.Tooltip(infoInterventi, {
-  boundary: document.body // or document.querySelector('#boundary')
+flatpickr(document.querySelector('#inizioP1'), {
+	allowInput: true,
+	dateFormat: 'd/m/Y',
+	locale: "it"
 })
+flatpickr(document.querySelector('#fineP1'), {
+	allowInput: true,
+	dateFormat: 'd/m/Y',
+	locale: "it"
+})
+flatpickr(document.querySelector('#inizioP2'), {
+	allowInput: true,
+	dateFormat: 'd/m/Y',
+	locale: "it"
+})
+flatpickr(document.querySelector('#fineP2'), {
+	allowInput: true,
+	dateFormat: 'd/m/Y',
+	locale: "it"
+})
+
 </script>		
 		
   </body>
