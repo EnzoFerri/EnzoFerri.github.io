@@ -2,7 +2,8 @@
 <html lang="it">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>GeRI</title>
     <link rel="stylesheet" href="./bootstrap-lombardia/dist/css/bootstrap-lombardia.min.css" />
   </head>
   
@@ -34,10 +35,10 @@
                       <a class="list-item" href="#"><span>Impostazioni</span></a>
                     </li>
                     <li>
-                      <a class="list-item" href="#"><span>Gestione utenti</span></a>
+                      <a class="list-item" href="./gestione_utenti.html"><span>Gestione utenti</span></a>
                     </li>
                     <li>
-                      <a class="list-item" href="#"><span>LOGOUT</span></a>
+                      <a class="list-item" href="./non_autenticato.html"><span>LOGOUT</span></a>
                     </li>
                   </ul>
                 </div>
@@ -92,44 +93,11 @@
             </div>
             <div class="menu-wrapper">
               <ul class="navbar-nav">
-                <li class="nav-item dropdown">
-                  <a class="nav-link" href="#"><span>Link</span></a>
-                </li>
                 <li class="nav-item dropdown active">
                   <a class="nav-link active" href="#"><span>Utenti</span><span class="visually-hidden">voce selezionata</span></a>
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link disabled" href="#"><span>Disabled</span></a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <span>Dropdown</span>
-                    <svg class="icon icon-xs">
-                      <use xlink:href="./bootstrap-lombardia/dist/svg/sprites.svg#it-expand"></use>
-                    </svg>
-                  </a>
-                  <div class="dropdown-menu">
-                    <div class="link-list-wrapper">
-                      <ul class="link-list">
-                        <li>
-                          <span class="link-list-heading text-primary fw-bold">Heading</span>
-                        </li>
-                        <li>
-                          <a class="list-item" href="#"><span>Link list 1</span></a>
-                        </li>
-                        <li>
-                          <a class="list-item" href="#"><span>Link list 2</span></a>
-                        </li>
-                        <li>
-                          <a class="list-item" href="#"><span>Link list 3</span></a>
-                        </li>
-                        <li><span class="divider"></span></li>
-                        <li>
-                          <a class="list-item" href="#"><span>Link list 4</span></a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
+                  <a class="nav-link" href="./m2_abitazione.html"><span>Immobili</span></a>
                 </li>
               </ul>
             </div>
@@ -167,46 +135,6 @@
 									<div class="form-group col-md-4">
 										<label for="formCodFisc">Codice Fiscale</label>
 										<input type="text" class="form-control" id="formCodFisc" />
-									</div>
-								</div>
-								<div class="row">
-									<div class="form-group col-9 col-md-10">
-										<label for="inputAddress">Indirizzo</label>
-										<input type="text" class="form-control" id="inputAddress" />
-									</div>
-									<div class="form-group col-3 col-md-2">
-										<label for="civico" class="input-number-label">Civico</label>
-										<input type="number" class="form-control" id="civico" />
-									</div>
-								</div>
-								<div class="row">
-									<div class="form-group col-md-6">
-										<label for="inputCity">Comune</label>
-										<input type="text" class="form-control" id="inputCity" />
-									</div>
-									<div class="form-group col-md-2">
-										<label for="inputCAP">CAP</label>
-										<input type="number" class="form-control" id="inputCAP" />
-									</div>
-									<div class="col-md-4">
-										<div class="select-wrapper">
-											<label for="accessibleAutocomplete">Provincia</label>
-											<select class="form-control" id="accessibleAutocomplete" title="Scegli una provincia">
-												<option selected value="">Scegli una opzione</option>
-												<option value="BG">Bergamo</option>
-												<option value="BS">Brescia</option>
-												<option value="CO">Como</option>
-												<option value="CR">Cremona</option>
-												<option value="LC">Lecco</option>
-												<option value="LO">Lodi</option>
-												<option value="MN">Mantova</option>
-												<option value="MI">Milano</option>
-												<option value="MB">Monza e Brianza</option>
-												<option value="PV">Pavia</option>
-												<option value="SO">Sondrio</option>
-												<option value="VA">Varese</option>
-											</select>
-										</div>
 									</div>
 								</div>
 								<div class="row">
@@ -329,23 +257,6 @@
           <span class="d-inline-block mt-3 me-2"><a href="">Contatti</a></span>
           <span class="d-inline-block mt-3 me-2"><a href="">Credits</a></span>
       </div>
-<!--      <div class="col-12 mt-3">
-        <ul
-          class="it-footer-small-prints-list list-inline mb-0 d-flex flex-column flex-md-row"
-        >
-          <li class="list-inline-item"><a href="">Privacy</a></li>
-          <li class="list-inline-item">|</li>
-          <li class="list-inline-item"><a href="">Accessibilità</a></li>
-          <li class="list-inline-item">|</li>
-          <li class="list-inline-item"><a href="">Cookie policy</a></li>
-          <li class="list-inline-item">|</li>
-          <li class="list-inline-item"><a href="">Note legali</a></li>
-          <li class="list-inline-item">|</li>
-          <li class="list-inline-item"><a href="">Contatti</a></li>
-          <li class="list-inline-item">|</li>
-          <li class="list-inline-item"><a href="">Credits</a></li>
-        </ul>
-      </div>      -->
     </div>
     <div class="row">
       <div class="col-12 my-3 copyright">
